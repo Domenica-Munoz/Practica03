@@ -128,21 +128,20 @@ function validarNumeros1(e){
 
     function validar_correo()
 {
-    var contenido=document.getElementById('correo').value;
-    var conte=contenido.split("@est.ups.edu.ec");
-    var conte=contenido.split("@ups.edu.ec");
-    if(!conte[1] || conte[0]=="") {
-      alert('no es correo valido(1)');
-    } else{
-      var cont1=conte[0].split(".");
-      var cont2=conte[1].split(".");
-      if(!cont1[1]){
-        alert('no es correo valido(2)');
-      }else if(!cont2[1])
-      {
-        alert('no es correo valido(3)');
-      }
+  f=txt.split('@')
+  if(f.length >=2){
+    if(f[0].length >=1){
+      if(f[1]=='ups.edu.ec' || f[1]=='est.ups.edu.ec' )
+      document.getElementById("mensaje correcto").innerHTML = 'correo correcto';
+      correo.style.borderColor = 'blue';
+      valEmail= true
+    }else{
+      document.getElementById("mensaje correcto").innerHTML = 'no valido';
+      correo.style.borderColor = 'red';
+      valEmail= false
     }
+  }
+   
 }
     
 

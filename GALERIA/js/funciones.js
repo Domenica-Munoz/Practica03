@@ -8,14 +8,13 @@ lista=[{"id":1,"imagen":"imagenes/1.jpg"},
 {"id":8,"imagen":"../imagenes/9.jpg"},
 {"id":9,"imagen":"../imagenes/10.jpg"},
 {"id":10,"imagen":"../imagenes/11.jpg"}]
-
-imagenes = [0];
+imagenes = [1, 2, 3, 4, 5];
 var posActual=0;
 
 function inicio(){
-    for (i=0 ; i<7; i++){
+    for (i=0 ; i<5; i++){
         
-        imagenes[i] = Math.floor(Math.random() * (11));    
+        imagenes[i] = Math.floor(Math.random() * (10));    
         
         
     }
@@ -60,6 +59,7 @@ function anterior(){
     imprimir();
     
 }
+
 function siguiente(){
     
     posActual++;
